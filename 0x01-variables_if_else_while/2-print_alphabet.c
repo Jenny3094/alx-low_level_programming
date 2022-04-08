@@ -7,13 +7,11 @@
  */
 int main(void)
 {
-char c = 'a';
+int c;
 
-while (c <= 'z')
+for (c = 0; c < 26; ++c)
+putchar('a' + c);
 
-putchar(c);
-c++;
-{
 putchar('\n');
 return (0);
 }
