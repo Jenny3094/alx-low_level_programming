@@ -1,16 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - entry point
- * Description: Print the lowercase alphabet
+ * Description: Print alphabets
  * Return: 0
  */
 int main(void)
 {
-int c;
+char c = 'a';
 
-for (c = 0 ; c < 26 ; a + c)
-putchar('a' + c);
+while (c <= 'z')
 
+putchar(c);
+c++;
+{
 putchar('\n');
 return (0);
 }
