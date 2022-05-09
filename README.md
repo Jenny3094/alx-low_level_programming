@@ -1,13 +1,9 @@
 ALX School Low-Level Programming
+
 This repository stores my solutions to the amazing low-level programming projects I did at the ALX school.
 
-Table of contents
-
 Requirements
-Projects
-Usage
 
-Requirements
 The C scripts were compiled with GCC 4.8.4.
 
 Some scripts need more specific requirements, but these will be shown where they are needed.
@@ -78,4 +74,5 @@ Here is the complete list of projects in this repository, each project has its d
 0x1E. C - Search Algorithms
 
 Usage
+
 Each project and task contains the instructions to compile the code and execute the results.
