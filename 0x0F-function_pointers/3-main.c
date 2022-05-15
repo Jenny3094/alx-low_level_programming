@@ -1,33 +1,25 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "3-calc.h"
-
 /**
- * main - performs simple operations
- * @argc: arg count
- * @argv: arg value
- *
- * Return:int
+ * main - is the main function
+ * @argc: number of lines arguments
+ * @argv: array of elements
+ * Return: 0
  */
+
 int main(int argc, char *argv[])
 {
-int a, b, c;
-int (*fun)(int, int);
+int i;
 
 if (argc != 4)
 {
 printf("Error\n");
 exit(98);
 }
-a = atoi(argv[1]);
-b = atoi(argv[3]);
-fun = get_op_func(argv[2]);
-if (fun == NULL)
-{
-printf("Error\n");
-exit(99);
-}
-c = fun(a, b);
-printf("%d\n", c);
+
+i = (*get_op_func(argv[2]))(atoi(argv[1]), atoi(argv[3]));
+printf("%d\n", i);
+
 return (0);
 }
