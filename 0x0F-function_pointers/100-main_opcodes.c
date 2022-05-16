@@ -1,35 +1,37 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- * main - prints opcode of own main function
+ * main - Print the opcodes of the function
+ * @argc: Number of args given
+ * @argv: Argument of number of bytes to print
  *
- * @argc: argument count
- * @argv: arg value
- * Return: int
+ * Return: 0 on success, Print Error for errors, exit value 1 if
+ * incorrect # of args, exit value 2 if number of bytes is negative
  */
 int main(int argc, char *argv[])
 {
-int x, i;
-unsigned char *p;
+	char *add;
+	int i, bytes;
 
-if (argc != 2)
-{
-printf("Error\n");
-exit(1);
-}
-x = atoi(argv[1]);
-if (x < 0)
-{
-printf("Error\n");
-exit(2);
-}
-p = (unsigned char *)main;
-i = 0;
-if (x > 0)
-{
-while (i < (x - 1))
-printf("%02hhx ", p[i++]);
-printf("%hhx\n", p[i]);
-}
-return (0);
+	if (argc != 2)
+	{
+		printf("Error\n");
+		exit(1);
+	}
+	if (atoi(argv[1]) < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+	add = (char *)&main;
+	bytes = atoi(argv[1]);
+	i = 0;
+	while (i < bytes - 1)
+	{
+		printf("%02hhx ", add[i]);
+		i++;
+	}
+	printf("%02hhx\n", add[i]);
+	return (0);
 }
