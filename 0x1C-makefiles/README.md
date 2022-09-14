@@ -17,7 +17,7 @@ Create your first Makefile.
 
 Requirements:
 
-* name of the executable: `holberton`
+* name of the executable: `school`
 * rules: `all`
     * The `all` rule builds your executable
 * variables: none
@@ -26,8 +26,8 @@ Requirements:
 
 ```
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ make -f 0-Makefile 
-gcc main.c holberton.c -o holberton
-$ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ ./holberton 
+gcc main.c school.c -o school
+$ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ ./school
 j#0000000000000000000000000000000000000
 j#000000000000000000@Q**g00000000000000
 j#0000000000000000*]++]4000000000000000
@@ -60,20 +60,20 @@ $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$
 
 Requirements:
 
-* name of the executable: `holberton`
+* name of the executable: `school`
 * rules: `all`
     * The `all` rule builds your executable
 * variables: `CC`, `SRC`
     * `C`: the compiler to be used
     * `SRC`: the `.c` files
 
-**Solution:** [1-Makefile](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x1C-makefiles/1-Makefile)
+**Solution:** [1-Makefile](https://github.com/Jenny3094/alx-low_level_programming/tree/master/0x1C-makefiles/1-Makefile)
 
 ```
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ make -f 1-Makefile
-gcc main.c holberton.c -o holberton
+gcc main.c school.c -o school
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ make -f 1-Makefile
-gcc main.c holberton.c -o holberton
+gcc main.c school.c -o school
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$
 ```
 
@@ -83,7 +83,7 @@ Create your first useful Makefile.
 
 Requirements:
 
-* name of the executable: `holberton`
+* name of the executable: `school`
 * rules: `all`
     * The `all` rule builds your executable
 * variables: `CC`, `SRC`, `OBJ`, `NAME`
@@ -94,19 +94,19 @@ Requirements:
 * The `all` rule should recompile only the updated source files
 * You are not allowed to have a list of all the ``.o`` files
 
-**Solution:** [2-Makefile](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x1C-makefiles/2-Makefile)
+**Solution:** [2-Makefile](https://github.com/Jenny3094/alx-low_level_programming/tree/master/0x1C-makefiles/2-Makefile)
 
 ```
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ make -f 2-Makefile
 gcc    -c -o main.o main.c
-gcc    -c -o holberton.o holberton.c
-gcc main.o holberton.o -o holberton
+gcc    -c -o school.o school.c
+gcc main.o school.o -o school
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ make -f 2-Makefile
-gcc main.o holberton.o -o holberton
-$ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ echo "/* Holberton */" >> main.c
+gcc main.o school.o -o school
+$ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ echo "/* school */" >> main.c
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ make -f 2-Makefile
 gcc    -c -o main.o main.c
-gcc main.o holberton.o -o holberton
+gcc main.o school.o -o school
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$
 ```
 
@@ -114,7 +114,7 @@ $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$
 
 Requirements:
 
-* name of the executable: `holberton`
+* name of the executable: `school`
 * rules: `all`, `clean`, `oclean`, `fclean`, `re`
     * `all`: builds your executable
     * `clean`: deletes all Emacs and Vim temporary files along with the executable
@@ -131,7 +131,7 @@ Requirements:
 * The `clean`, `oclean`, `fclean`, `re` rules should never fail
 * You are not allowed to have a list of all the `.o` files
 
-**Solution:** [3-Makefile](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x1C-makefiles/3-Makefile)
+**Solution:** [3-Makefile](https://github.com/Jenny3094/alx-low_level_programming/tree/master/0x1C-makefiles/3-Makefile)
 
 ```
 $ amonkeyprogrammer@ubuntu:~/holberton/curriculum_by_$ amonkeyprogrammer/holbertonschool-low_level_programming/0x1C. Makefiles$ ls -1
@@ -139,46 +139,46 @@ $ amonkeyprogrammer@ubuntu:~/holberton/curriculum_by_$ amonkeyprogrammer/holbert
 1-Makefile
 2-Makefile
 3-Makefile
-holberton.c
+school.c
 main.c
 main.c~
 m.h
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ make -f 3-Makefile
 gcc    -c -o main.o main.c
-gcc    -c -o holberton.o holberton.c
-gcc main.o holberton.o -o holberton
+gcc    -c -o school.o school.c
+gcc main.o school.o -o school
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ make all -f 3-Makefile
-gcc main.o holberton.o -o holberton
+gcc main.o school.o -o school
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ ls -1
 0-Makefile
 1-Makefile
 2-Makefile
 3-Makefile
-holberton
-holberton.c
-holberton.o
+school
+school.c
+school.o
 main.c
 main.c~
 main.o
 m.h
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ make clean -f 3-Makefile 
-rm -f *~ holberton
+rm -f *~ school
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ make oclean -f 3-Makefile 
-rm -f main.o holberton.o
+rm -f main.o school.o
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ make fclean -f 3-Makefile 
-rm -f *~ holberton
-rm -f main.o holberton.o
+rm -f *~ school
+rm -f main.o school.o
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ make all -f 3-Makefile
 gcc    -c -o main.o main.c
-gcc    -c -o holberton.o holberton.c
-gcc main.o holberton.o -o holberton
+gcc    -c -o school.o school.c
+gcc main.o school.o -o school
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ make all -f 3-Makefile
-gcc main.o holberton.o -o holberton
+gcc main.o school.o -o school
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ make re -f 3-Makefile
-rm -f main.o holberton.o
+rm -f main.o school.o
 gcc    -c -o main.o main.c
-gcc    -c -o holberton.o holberton.c
-gcc main.o holberton.o -o holberton
+gcc    -c -o school.o school.c
+gcc main.o school.o -o school
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$
 ```
 
@@ -186,7 +186,7 @@ $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$
 
 Requirements:
 
-* name of the executable: `holberton`
+* name of the executable: `school`
 * rules: `all`, `clean`, `fclean`, `oclean`, `re`
     * `all`: builds your executable
     * `clean`: deletes all Emacs and Vim temporary files along with the executable
@@ -204,13 +204,13 @@ Requirements:
 * The `clean`, `oclean`, `fclean`, `re` rules should never fail
 * You are not allowed to have a list of all the `.o` files
 
-**Solution:** [4-Makefile](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x1C-makefiles/4-Makefile)
+**Solution:** [4-Makefile](https://github.com/Jenny3094/alx-low_level_programming/tree/master/0x1C-makefiles/4-Makefile)
 
 ```
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$ make all -f 4-Makefile
 gcc -Wall -Werror -Wextra -pedantic   -c -o main.o main.c
-gcc -Wall -Werror -Wextra -pedantic   -c -o holberton.o holberton.c
-gcc main.o holberton.o -o holberton
+gcc -Wall -Werror -Wextra -pedantic   -c -o school.o school.c
+gcc main.o school.o -o school
 $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$
 ```
 
@@ -218,7 +218,7 @@ $ amonkeyprogrammer@ubuntu:~/0x1C. Makefiles$
 
 Requirements:
 
-* name of the executable: `holberton`
+* name of the executable: `school`
 * rules: `all`, `clean`, `fclean`, `oclean`, `re`
     * `all`: builds your executable
     * `clean`: deletes all Emacs and Vim temporary files along with the executable
@@ -244,4 +244,4 @@ Requirements:
 * Your Makefile should work even if there is a file in the folder that has the same name as one of your rule
 * Your Makefile should not compile if the header file `m.h` is missing
 
-**Solution:** [100-Makefile](https://github.com/Jenny3094/alx-low_level_programming/tree/master/0x1C-makefiles)
+**Solution:** [100-Makefile](https://github.com/Jenny3094/alx-low_level_programming/tree/master/0x1C-makefiles/100-Makefile)
